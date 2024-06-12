@@ -1,0 +1,11 @@
+changelog 
+
+changes in V2022.0.3@ 2025-06-13
+==================  
+1. added multiple actions and delay for action (1,2,3)
+2. added auto reload if any parameter is changde in config
+
+
+changes in V2022.0.2@ 2025-06-11
+==================  
+* first version

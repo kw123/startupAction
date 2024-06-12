@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<PluginConfig>
+        
+
+	<Field id="infoLabel0" 		fontColor="orange"	type="label"> 
+		<Label>Startup plugin   Developed by Karl Wachs
+This plugin can be used to start indigo actions at startup of indigo
+
+At startup this plugin will check if cpu time used by process IndigoServer
+  is less than x[secs] (defined below)
+  This is used to check if indigo has just started
+
+if yes: execute action groups 1,2,3 after defined individual delays
+        with the individual delays you can sequence the actions
+        delay3 &gt;= delay2 &gt;= delay1
+
+then: do nothing, wait until plugin is disabled or indigo shuts down
+
+It does nothing else.
+
+If a parameter is changed, the plugin will restart
+   and execute the requested actions after restart if conditions are met
+</Label>  
+	</Field>
+
+    <Field 
+        id="maxCPUtimeUsed"  type="menu" default="10">
+        <List>
+            <Option value="1" >1 [secs]</Option>
+            <Option value="5" >5 [secs]</Option>
+            <Option value="10" >10 [secs]</Option>
+            <Option value="15" >15 [secs]</Option>
+            <Option value="20" >20 [secs]</Option>
+            <Option value="999999999999" >infnite to test</Option>
+        </List>
+        <Label>CPU time limit for IndigoServer</Label>
+    </Field>
+
+
+    <Field         
+        id="infoLabel11"
+        type="label">
+        <Label>pick indigo actions that will be executed when Indigo is starting up</Label>
+    </Field>
+
+    <Field 
+        id="startUpAction1"
+        type="menu">
+        <List class="self" filter="" method="filterActions"  dynamicReload="false"/>
+        <Label>Indigo Action 1</Label>
+    </Field>
+    <Field 
+        id="startUpActionDelay1"  type="menu" default="1">
+        <List>
+            <Option value="-1" >off</Option>
+            <Option value="0" >0</Option>
+            <Option value="1" >1</Option>
+            <Option value="2" >2</Option>
+            <Option value="3" >3</Option>
+            <Option value="4" >4</Option>
+            <Option value="5" >5</Option>
+            <Option value="6" >6</Option>
+            <Option value="7" >7</Option>
+            <Option value="8" >8</Option>
+            <Option value="9" >9</Option>
+            <Option value="10" >10</Option>
+            <Option value="15" >15</Option>
+            <Option value="20" >20</Option>
+            <Option value="25" >25</Option>
+            <Option value="30" >30</Option>
+           </List>
+        <Label>Delay Action 1 after startup by [secs]</Label>
+    </Field>
+
+    <Field 
+        id="startUpAction2"
+        type="menu">
+        <List class="self" filter="" method="filterActions"  dynamicReload="false"/>
+        <Label>Indigo Action 2</Label>
+    </Field>
+    <Field 
+        id="startUpActionDelay2"  type="menu" default="2">
+        <List>
+            <Option value="-1" >off</Option>
+            <Option value="0" >0</Option>
+            <Option value="1" >1</Option>
+            <Option value="2" >2</Option>
+            <Option value="3" >3</Option>
+            <Option value="4" >4</Option>
+            <Option value="5" >5</Option>
+            <Option value="6" >6</Option>
+            <Option value="7" >7</Option>
+            <Option value="8" >8</Option>
+            <Option value="9" >9</Option>
+            <Option value="10" >10</Option>
+            <Option value="15" >15</Option>
+            <Option value="20" >20</Option>
+            <Option value="25" >25</Option>
+            <Option value="30" >30</Option>
+          </List>
+        <Label>Delay Action 2 after startup by [secs]</Label>
+    </Field>
+    <Field 
+        id="startUpAction3"
+        type="menu">
+        <List class="self" filter="" method="filterActions"  dynamicReload="false"/>
+        <Label>Indigo Action 3</Label>
+    </Field>
+    <Field 
+        id="startUpActionDelay3"  type="menu" default="3">
+        <List>
+            <Option value="-1" >off</Option>
+            <Option value="0" >0</Option>
+            <Option value="1" >1</Option>
+            <Option value="2" >2</Option>
+            <Option value="3" >3</Option>
+            <Option value="4" >4</Option>
+            <Option value="5" >5</Option>
+            <Option value="6" >6</Option>
+            <Option value="7" >7</Option>
+            <Option value="8" >8</Option>
+            <Option value="9" >9</Option>
+            <Option value="10" >10</Option>
+            <Option value="15" >15</Option>
+            <Option value="20" >20</Option>
+            <Option value="25" >25</Option>
+            <Option value="30" >30</Option>
+        </List>
+        <Label>Delay Action 3 after startup by [secs]</Label>
+    </Field>
+
+
+
+    <Field         
+        id="infoLabel2"
+        type="label">
+        <Label>Select cpu time used as cutoff to check if indigo server is just starting</Label>
+    </Field>
+
+</PluginConfig>
